@@ -7,7 +7,7 @@ android {
  namespace 'com.mawten.colony'
  compileSdk 36
  buildFeatures { buildConfig true }
- defaultConfig { applicationId 'com.mawten.colony'; minSdk 23; targetSdk 36; versionCode 3; versionName '1.2.0'; resValue 'string', 'admob_app_id', admobAppId; buildConfigField 'boolean', 'ADMOB_CONFIGURED', admobConfigured.toString() }
+ defaultConfig { applicationId 'com.mawten.colony'; minSdk 23; targetSdk 36; versionCode 4; versionName '1.3.0'; resValue 'string', 'admob_app_id', admobAppId; buildConfigField 'boolean', 'ADMOB_CONFIGURED', admobConfigured.toString() }
  signingConfigs { release { if(System.getenv('MAWTEN_SIGNING_STORE')) { storeFile file(System.getenv('MAWTEN_SIGNING_STORE')); storePassword System.getenv('MAWTEN_SIGNING_PASSWORD'); keyAlias 'mawten'; keyPassword System.getenv('MAWTEN_SIGNING_PASSWORD') } } }
  buildTypes { release { minifyEnabled false; if(System.getenv('MAWTEN_SIGNING_STORE')) signingConfig signingConfigs.release } }
 }
