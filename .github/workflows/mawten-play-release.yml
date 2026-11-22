@@ -23,13 +23,14 @@ jobs:
       - name: Build Play AAB and validate release
         working-directory: mawten/android
         run: |
-          gradle --no-daemon :app:bundleRelease :app:assembleDebug :app:lintRelease
+          gradle --no-daemon :app:bundleRelease :app:assembleRelease :app:assembleDebug :app:lintRelease
           gradle --no-daemon :app:dependencies --configuration releaseRuntimeClasspath > app/build/release-dependencies.txt
       - name: Stage unsigned bundle for private local signing
         run: |
           mkdir -p play-build
           cp mawten/android/app/build/outputs/bundle/release/app-release.aab play-build/Mawten-unsigned.aab
           cp mawten/android/app/build/outputs/apk/debug/app-debug.apk play-build/Mawten-debug.apk
+          cp mawten/android/app/build/outputs/apk/release/app-release-unsigned.apk play-build/Mawten-unsigned.apk
           cp mawten/android/app/build/release-dependencies.txt play-build/
           cp mawten/android/app/build/reports/lint-results-release.* play-build/ || true
           sha256sum play-build/Mawten-unsigned.aab > play-build/build-sha256.txt
