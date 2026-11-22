@@ -1,0 +1,18 @@
+{
+  "version": "1.3.1",
+  "versionCode": 5,
+  "package": "com.mawten.colony",
+  "sourceCommit": "358bc16d46371da86ea9e3819f7aa2c1c1976fb6",
+  "ciRun": 45052018804,
+  "certificateSha256": "D2:2F:48:A9:63:26:5E:2E:DF:B6:61:AC:C1:02:95:FF:F0:D4:B6:1B:3F:5E:7E:AC:AC:33:3D:D6:E3:95:26:F9",
+  "artifactSha256": "f0a72545ecf5e10f31b82952c4409f2255ba14c194b3574598681511a8cf0e7a",
+  "signed": true,
+  "apk": {
+    "sha256": "70f3575e6547dc14d1c1619d17d7c2309ba345ba5d74c9c92537adb2895ddf71",
+    "bytes": 7254325
+  },
+  "aab": {
+    "sha256": "aa682b366ea3034d96514898df17a52a0838632d71c7e486e2f3a715ff681a2e",
+    "bytes": 6916038
+  }
+}
